@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
             session.delete :user_id
             head :no_content
         else
-            render json: {error: "I pity the fool"}, status: :unauthorized
+            render json: {error: "User does not exist"}, status: :unauthorized
         end
     end
 end
