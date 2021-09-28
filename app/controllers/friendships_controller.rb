@@ -1,10 +1,5 @@
 class FriendshipsController < ApplicationController
     
-    def index
-        friendships = Friendship.all
-        render json: friendships, status: :created
-    end
-    
     def show
         user = User.find_by(id: params[:id])
         if user
