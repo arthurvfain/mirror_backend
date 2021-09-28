@@ -19,7 +19,7 @@ module Backend
     config.action_dispatch.cookies_same_site_protection = :strict
 
     config.load_defaults 6.1
-    config.api_only = true
+    # config.api_only = true
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
