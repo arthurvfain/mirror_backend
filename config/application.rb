@@ -9,8 +9,17 @@ Bundler.require(*Rails.groups)
 module Backend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    
+    #Adding cookies and session middleware
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
 
+    # Use SameSite=Strict for all cookies to help protect against CSRF
+    # https://owasp.org/www-community/SameSite
+    config.action_dispatch.cookies_same_site_protection = :strict
+
+    config.load_defaults 6.1
+    config.api_only = true
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
