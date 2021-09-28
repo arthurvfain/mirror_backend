@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
     
-    skip_before_action :verify_authenticity_token
-
     def me
         if session[:user_id]
             user = User.find_by(id: session[:user_id])
