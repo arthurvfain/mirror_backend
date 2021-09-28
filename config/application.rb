@@ -11,8 +11,8 @@ module Backend
     # Initialize configuration defaults for originally generated Rails version.
     
     #Adding cookies and session middleware
-    config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
+    # config.middleware.use ActionDispatch::Cookies
+    # config.middleware.use ActionDispatch::Session::CookieStore
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     # https://owasp.org/www-community/SameSite
