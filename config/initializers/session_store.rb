@@ -3,5 +3,5 @@ Rails.application.config.session_store :cookie_store, {
   :domain => :all,
   :same_site => :strict,
   :secure => :true,
-  :tld_length => 2
+  :tld_length => 3
 }
