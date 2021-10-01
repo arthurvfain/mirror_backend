@@ -1,7 +1,7 @@
 Rails.application.config.session_store :cookie_store, {
-  :key => '_application_session',
+  :key => '_session_id',
   :domain => :all,
-  :same_site => :strict,
+  :same_site => :none,
   :secure => :true,
   :tld_length => 3
 }
