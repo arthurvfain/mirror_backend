@@ -5,7 +5,7 @@ class User < ApplicationRecord
     has_many :friend_requests, foreign_key: :requestee_id, dependent: :destroy
 
     # has_many :invitations, foreign_key: :invitee_id, dependent: :destroy
-    #has_many :invitations, foreign_key: :inviter_id, dependent: :destroy
+    has_many :reflections, foreign_key: :user_id, dependent: :destroy
 
     has_many :friendships, dependent: :destroy
     has_many :friends, through: :friendships

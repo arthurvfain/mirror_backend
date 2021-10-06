@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :reflections, only: [:show]
   resources :friendships, only: [:index, :show, :create]
   resources :friend_requests, only: [:show, :create, :destroy]
   resources :users, only: [:index, :show, :create, :destroy]
   resources :sessions, only: [:create]
+  post '/reflect/:user/:mirror', to: 'reflections#create'
+  get '/reflection_gen', to: 'reflections#generate'
   delete '/sessions', to: 'sessions#destroy'
   get '/me', to: 'sessions#me'
   delete '/cancel_request/:requester/:requestee', to: 'friend_requests#cancel_request'

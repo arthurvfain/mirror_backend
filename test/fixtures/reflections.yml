@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  mirror_id: 
+  o: 
+  c: 
+  e: 
+  a: 
+  'n': 
+
+two:
+  user_id: 
+  mirror_id: 
+  o: 
+  c: 
+  e: 
+  a: 
+  'n': 
